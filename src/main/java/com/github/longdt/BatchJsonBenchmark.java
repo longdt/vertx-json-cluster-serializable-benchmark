@@ -43,7 +43,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 @State(Scope.Benchmark)
-public class JsonObjectBenchmark {
+public class BatchJsonBenchmark {
     volatile List<Buffer> buffers;
     volatile List<JsonObject> jsonObjects;
     volatile List<MyJsonObject> myJsonObjects;
