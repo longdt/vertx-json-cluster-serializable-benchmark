@@ -39,20 +39,20 @@ import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.infra.Blackhole;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
-@State(Scope.Benchmark)
+@State(Scope.Thread)
 public class BatchJsonBenchmark {
-    volatile List<Buffer> buffers;
-    volatile List<JsonObject> jsonObjects;
-    volatile List<MyJsonObject> myJsonObjects;
+    List<Buffer> buffers;
+    List<JsonObject> jsonObjects;
+    List<MyJsonObject> myJsonObjects;
 
     @Setup
     public void setup() {
-        buffers = new CopyOnWriteArrayList<>();
-        jsonObjects = new CopyOnWriteArrayList<>();
-        myJsonObjects = new CopyOnWriteArrayList<>();
+        buffers = new ArrayList<>();
+        jsonObjects = new ArrayList<>();
+        myJsonObjects = new ArrayList<>();
         JsonObject json = new JsonObject();
         for (int i = 0; i < 100; ++i) {
             json.put("attr" + i, i);

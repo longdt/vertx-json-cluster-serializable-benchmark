@@ -1,11 +1,11 @@
 ### Benchmark Result:
 BatchJsonBenchmark: 100 small json objects
 ```
-Benchmark                                         Mode  Cnt     Score    Error  Units
-JsonObjectBenchmark.readFromBuffer_JsonObject    thrpt   25  2401.014 ± 45.937  ops/s
-JsonObjectBenchmark.readFromBuffer_MyJsonObject  thrpt   25  2437.243 ± 28.637  ops/s
-JsonObjectBenchmark.writeToBuffer_JsonObject     thrpt   25  2510.820 ± 16.262  ops/s
-JsonObjectBenchmark.writeToBuffer_MyJsonObject   thrpt   25  2669.995 ±  9.591  ops/s
+Benchmark                                        Mode  Cnt       Score      Error  Units
+BatchJsonBenchmark.readFromBuffer_JsonObject    thrpt   20    2283.384 ±   38.203  ops/s
+BatchJsonBenchmark.readFromBuffer_MyJsonObject  thrpt   20    2410.698 ±   69.490  ops/s
+BatchJsonBenchmark.writeToBuffer_JsonObject     thrpt   20    2506.151 ±   16.269  ops/s
+BatchJsonBenchmark.writeToBuffer_MyJsonObject   thrpt   20    2620.137 ±   43.798  ops/s
 ```
 RealJsonBenchmark: a json object from https://www.json-generator.com/
 ```
